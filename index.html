@@ -815,64 +815,110 @@
         padding-bottom:35px;
       }
 
-      footer\[style\*="padding:100px 30px 45px"\]{
-        padding:75px 18px 30px !important;
-        border-top-left-radius:38px;
-        border-top-right-radius:38px;
+      footer{
+        padding:0 !important;
+        margin-top:30px;
+        border:none !important;
+        background:transparent !important;
       }
 
-      footer div\[style\*="grid-template-columns:1\.2fr 0\.8fr 0\.8fr 1fr"\]{
-        gap:34px !important;
-        padding-bottom:40px !important;
+      footer[style*="padding:100px 30px 45px"]{
+        padding:70px 20px 28px !important;
+        border-top-left-radius:42px;
+        border-top-right-radius:42px;
+        background:linear-gradient(180deg,#ffffff,#fdf4ff,#f5f3ff) !important;
+        overflow:hidden;
       }
 
-      footer div\[style\*="background:linear-gradient\(180deg,#ffffff,#fdf2f8\)"\]{
-        transform:none !important;
-        padding:28px 24px !important;
-        border-radius:30px !important;
+      footer .container{
+        position:relative;
       }
 
-      footer div\[style\*="font-size:48px"\]{
-        font-size:40px !important;
+      footer .container::before{
+        content:'';
+        position:absolute;
+        width:180px;
+        height:180px;
+        background:rgba(236,72,153,0.10);
+        filter:blur(80px);
+        top:-40px;
+        right:-60px;
+        border-radius:50%;
+      }
+
+      footer div[style*="grid-template-columns:1.2fr 0.8fr 0.8fr 1fr"]{
+        display:flex !important;
+        flex-direction:column !important;
+        gap:26px !important;
+        padding-bottom:34px !important;
+        border-bottom:none !important;
+      }
+
+      footer div[style*="margin-bottom:18px;display:flex;flex-direction:column"]{
+        align-items:center !important;
+      }
+
+      footer div[style*="font-size:48px"]{
+        font-size:38px !important;
         text-align:center !important;
       }
 
-      footer p\[style\*="max-width:390px"\]{
+      footer p[style*="max-width:390px"]{
         max-width:100% !important;
         text-align:center !important;
         font-size:14px !important;
         line-height:2 !important;
+        margin-bottom:22px !important;
       }
 
       footer h3{
-        font-size:22px !important;
+        font-size:20px !important;
+        margin-bottom:16px !important;
+        text-align:center !important;
       }
 
-      footer a{
-        padding:4px 0;
-      }
-
-      footer div\[style\*="padding-top:35px"\]{
-        padding-top:28px !important;
-        gap:16px !important;
-      }
-
-      footer div\[style\*="display:flex;align-items:center;gap:18px;flex-wrap:wrap"\]{
+      footer div[style*="display:flex;flex-direction:column;gap:16px"]{
         gap:12px !important;
+        align-items:center !important;
       }
 
-      footer div\[style\*="Social Media"\] div,
-      footer div\[style\*="Terms of Service"\]{
-        justify-content:center !important;
+      footer div[style*="background:linear-gradient(180deg,#ffffff,#fdf2f8)"]{
+        padding:28px 22px !important;
+        border-radius:28px !important;
+        transform:none !important;
+        margin-top:8px;
       }
 
-      footer a\[style\*="display:inline-flex;align-items:center;justify-content:center;padding:16px 24px"\]{
+      footer a[style*="display:inline-flex;align-items:center;justify-content:center;padding:16px 24px"]{
         width:100%;
-        padding:16px 20px !important;
         border-radius:18px !important;
+        padding:15px 18px !important;
       }
 
-      footer div\[style\*="Let’s Create"\]{
+      footer div[style*="padding-top:35px"]{
+        flex-direction:column !important;
+        justify-content:center !important;
+        text-align:center !important;
+        gap:14px !important;
+        padding-top:20px !important;
+      }
+
+      footer div[style*="display:flex;align-items:center;gap:18px;flex-wrap:wrap"]{
+        justify-content:center !important;
+        gap:14px !important;
+      }
+
+      footer a,
+      footer p,
+      footer h4{
+        text-align:center !important;
+      }
+
+      footer div[style*="Social Media"]{
+        align-items:center !important;
+      }
+
+      footer div[style*="Let’s Create"]{
         text-align:center !important;
       }
 
