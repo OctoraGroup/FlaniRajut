@@ -1,0 +1,1629 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flani_rajut | Handmade With Love</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+    }
+
+    html{
+      scroll-behavior:smooth;
+    }
+
+    body{
+      font-family:'Poppins',sans-serif;
+      scroll-behavior:smooth;
+      background:#f8fbff;
+      color:#111827;
+      overflow-x:hidden;
+    }
+
+    body::before{
+      content:'';
+      position:fixed;
+      width:700px;
+      height:700px;
+      background:rgba(0,140,255,0.14);
+      border-radius:50%;
+      filter:blur(120px);
+      top:-250px;
+      left:-250px;
+      z-index:-1;
+    }
+
+    body::after{
+      content:'';
+      position:fixed;
+      width:700px;
+      height:700px;
+      background:rgba(168,85,247,0.14);
+      border-radius:50%;
+      filter:blur(120px);
+      bottom:-250px;
+      right:-250px;
+      z-index:-1;
+    }
+
+    header{
+      position:fixed;
+      top:0;
+      width:100%;
+      z-index:999;
+      backdrop-filter:blur(18px);
+      background:rgba(255,255,255,0.75);
+      border-bottom:1px solid rgba(15,23,42,0.06);
+    }
+
+    nav{
+      max-width:1300px;
+      margin:auto;
+      padding:22px 30px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+    }
+
+    .logo{
+      font-size:30px;
+      font-weight:800;
+      background:linear-gradient(to right,#2563eb,#7c3aed,#a855f7);
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+      letter-spacing:0.5px;
+    }
+
+    .menu{
+      display:flex;
+      gap:35px;
+      align-items:center;
+    }
+
+    .menu a{
+      text-decoration:none;
+      color:#334155;
+      transition:0.3s;
+      font-size:15px;
+    }
+
+    .menu a:hover{
+      color:#7dd3fc;
+    }
+
+    .menu-btn{
+      padding:14px 24px;
+      border-radius:14px;
+      background:linear-gradient(to right,#2563eb,#9333ea);
+      color:white !important;
+      font-weight:600;
+      box-shadow:0 15px 40px rgba(37,99,235,0.35);
+    }
+
+    .hero{
+      min-height:100vh;
+      position:relative;
+      display:flex;
+      align-items:center;
+      padding:140px 30px 80px;
+    }
+
+    .hero-container{
+      max-width:1300px;
+      margin:auto;
+      width:100%;
+      display:grid;
+      grid-template-columns:1.1fr 1fr;
+      gap:70px;
+      align-items:center;
+    }
+
+    .hero-badge{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      padding:14px 22px;
+      border-radius:999px;
+      background:rgba(255,255,255,0.85);
+      border:1px solid rgba(37,99,235,0.12);
+      color:#4f46e5;
+      margin-bottom:30px;
+      backdrop-filter:blur(14px);
+      font-weight:600;
+      box-shadow:0 10px 30px rgba(37,99,235,0.08);
+    }
+
+    .hero h1{
+      font-size:84px;
+      line-height:1.02;
+      margin-bottom:28px;
+      font-weight:800;
+      color:#0f172a;
+      letter-spacing:-3px;
+    }
+
+    .gradient{
+      background:linear-gradient(to right,#2563eb,#7c3aed,#c026d3);
+      -webkit-background-clip:text;
+      -webkit-text-fill-color:transparent;
+    }
+
+    .hero p{
+      color:#475569;
+      font-size:19px;
+      line-height:1.9;
+      max-width:650px;
+      margin-bottom:40px;
+      font-weight:400;
+    }
+
+    .hero-buttons{
+      display:flex;
+      gap:20px;
+      flex-wrap:wrap;
+      margin-bottom:45px;
+    }
+
+    .btn{
+      text-decoration:none;
+      padding:18px 34px;
+      border-radius:18px;
+      font-weight:600;
+      transition:0.35s;
+    }
+
+    .btn-primary{
+      background:linear-gradient(to right,#2563eb,#9333ea);
+      color:white;
+      box-shadow:0 20px 50px rgba(37,99,235,0.22);
+    }
+
+    .btn-primary:hover{
+      transform:translateY(-4px);
+      box-shadow:0 25px 60px rgba(124,58,237,0.22);
+    }
+
+    .btn-secondary{
+      border:1px solid rgba(37,99,235,0.1);
+      color:#1e293b;
+      background:white;
+      backdrop-filter:blur(10px);
+      box-shadow:0 10px 30px rgba(15,23,42,0.05);
+    }
+
+    .stats{
+      display:flex;
+      gap:45px;
+      flex-wrap:wrap;
+    }
+
+    .stat h3{
+      font-size:38px;
+      color:#2563eb;
+      margin-bottom:6px;
+    }
+
+    .stat span{
+      color:#64748b;
+      font-size:14px;
+    }
+
+    .hero-image{
+      position:relative;
+      animation:float 6s ease-in-out infinite;
+    }
+
+    .hero-image img{
+      width:100%;
+      height:700px;
+      object-fit:cover;
+      border-radius:40px;
+      border:1px solid rgba(255,255,255,0.08);
+      box-shadow:0 40px 100px rgba(0,0,0,0.45);
+    }
+
+    .floating-card{
+      position:absolute;
+      background:rgba(255,255,255,0.9);
+      backdrop-filter:blur(20px);
+      border:1px solid rgba(255,255,255,0.08);
+      border-radius:24px;
+      padding:24px;
+      width:240px;
+      box-shadow:0 20px 50px rgba(0,0,0,0.25);
+    }
+
+    .card-one{
+      top:40px;
+      left:-40px;
+    }
+
+    .card-two{
+      bottom:40px;
+      right:-40px;
+    }
+
+    .floating-card h4{
+      color:#4f46e5;
+      margin-bottom:10px;
+    }
+
+    .floating-card p{
+      color:#475569;
+      line-height:1.7;
+      font-size:14px;
+    }
+
+    section{
+      padding:120px 30px;
+    }
+
+    .container{
+      max-width:1300px;
+      margin:auto;
+    }
+
+    .section-title{
+      text-align:center;
+      margin-bottom:70px;
+    }
+
+    .section-title span{
+      color:#4f46e5;
+      letter-spacing:3px;
+      font-size:14px;
+    }
+
+    .section-title h2{
+      font-size:56px;
+      margin:15px 0;
+      color:#0f172a;
+      font-weight:800;
+      line-height:1.1;
+      letter-spacing:-2px;
+    }
+
+    .section-title p{
+      color:#64748b;
+      max-width:700px;
+      margin:auto;
+      line-height:1.9;
+    }
+
+    .products{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:35px;
+    }
+
+    .product-card{
+      background:white;
+      border-radius:30px;
+      overflow:hidden;
+      border:1px solid rgba(37,99,235,0.06);
+      transition:0.4s;
+      position:relative;
+    }
+
+    .product-card::before{
+      content:'';
+      position:absolute;
+      inset:0;
+      background:linear-gradient(to bottom,transparent,rgba(124,58,237,0.03));
+      opacity:0;
+      transition:0.4s;
+      pointer-events:none;
+    }
+
+    .product-card:hover::before{
+      opacity:1;
+    }
+
+    .product-card:hover{
+      transform:translateY(-10px);
+      box-shadow:0 25px 60px rgba(37,99,235,0.12);
+      border-color:rgba(125,211,252,0.35);
+    }
+
+    .product-card img{
+      width:100%;
+      height:340px;
+      object-fit:cover;
+    }
+
+    .product-content{
+      padding:28px;
+    }
+
+    .product-content h3{
+      font-size:24px;
+      margin-bottom:10px;
+      color:#111827;
+      font-weight:700;
+    }
+
+    .product-content p{
+      color:#64748b;
+      line-height:1.8;
+      margin-bottom:18px;
+    }
+
+    .price{
+      color:#4f46e5;
+      font-size:24px;
+      font-weight:700;
+      margin-bottom:20px;
+    }
+
+    .product-btn{
+      display:inline-block;
+      padding:14px 24px;
+      border-radius:14px;
+      background:linear-gradient(to right,#2563eb,#9333ea);
+      color:white;
+      text-decoration:none;
+      font-weight:600;
+    }
+
+    .cta{
+      background:linear-gradient(to right,#dbeafe,#ede9fe,#f5d0fe);
+      border:1px solid rgba(37,99,235,0.08);
+      padding:90px 40px;
+      border-radius:40px;
+      box-shadow:0 30px 80px rgba(37,99,235,0.08);
+    }
+
+    .cta h2{
+      font-size:62px;
+      margin-bottom:20px;
+      color:#0f172a;
+      letter-spacing:-2px;
+      font-weight:800;
+    }
+
+    .cta p{
+      color:#475569;
+      max-width:700px;
+      margin:auto;
+      line-height:1.9;
+      margin-bottom:35px;
+    }
+
+    footer{
+      padding:50px 30px;
+      text-align:center;
+      color:#64748b;
+      border-top:1px solid rgba(15,23,42,0.06);
+      background:white;
+      font-weight:500;
+    }
+
+    
+
+    @keyframes float{
+      0%{transform:translateY(0)}
+      50%{transform:translateY(-15px)}
+      100%{transform:translateY(0)}
+    }
+
+    @keyframes fadeUp{
+      from{
+        opacity:0;
+        transform:translateY(40px);
+      }
+      to{
+        opacity:1;
+        transform:translateY(0);
+      }
+    }
+
+    @keyframes pulseGlow{
+      0%{
+        box-shadow:0 0 0 rgba(124,58,237,0);
+      }
+      50%{
+        box-shadow:0 20px 45px rgba(124,58,237,0.18);
+      }
+      100%{
+        box-shadow:0 0 0 rgba(124,58,237,0);
+      }
+    }
+
+    .hero-badge,
+    .product-card,
+    .floating-card,
+    .btn,
+    footer a,
+    img{
+      transition:all .35s ease;
+    }
+
+    .hero-badge{
+      animation:fadeUp 1s ease;
+    }
+
+    .hero h1{
+      animation:fadeUp 1.2s ease;
+    }
+
+    .hero p{
+      animation:fadeUp 1.4s ease;
+    }
+
+    .hero-buttons{
+      animation:fadeUp 1.6s ease;
+    }
+
+    .product-card:hover img{
+      transform:scale(1.05);
+    }
+
+    .product-card:hover{
+      transform:translateY(-12px);
+    }
+
+    .floating-card:hover{
+      transform:translateY(-8px);
+    }
+
+    .btn:hover{
+      transform:translateY(-4px) scale(1.02);
+    }
+
+    
+
+    .gallery-hover:hover img{
+      transform:scale(1.06);
+    }
+
+    .soft-hover{
+      transition:all .35s ease;
+    }
+
+    .soft-hover:hover{
+      transform:translateY(-8px);
+      box-shadow:0 25px 60px rgba(124,58,237,0.12);
+    }
+
+    @media(max-width:1000px){
+
+      .hero-container{
+        grid-template-columns:1fr;
+      }
+
+      .hero h1{
+        font-size:58px;
+      }
+
+      .hero-image img{
+        height:520px;
+      }
+
+      .floating-card{
+        display:none;
+      }
+
+    }
+
+    .reveal-scroll{
+      opacity:0;
+      transform:translateY(45px);
+      transition:opacity 0.9s ease, transform 0.9s ease;
+      will-change:opacity,transform;
+    }
+
+    .reveal-scroll.active{
+      opacity:1;
+      transform:translateY(0);
+    }
+
+    @media(max-width:768px){
+
+      .menu{
+        display:none;
+      }
+
+      .hero{
+        text-align:center;
+      }
+
+      .hero-buttons,
+      .stats{
+        justify-content:center;
+      }
+
+      .hero h1{
+        font-size:44px;
+      }
+
+      .section-title h2,
+      .cta h2{
+        font-size:36px;
+      }
+
+      .hero-image img{
+        height:420px;
+      }
+
+    }</style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <div class="logo">Flani_rajut</div>
+
+    <div class="menu">
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Products</a>
+      <a href="#">Gallery</a>
+      <a href="#">Testimonials</a>
+      <a href="#">Contact</a>
+      <a href="#" class="menu-btn">Chat WhatsApp</a>
+    </div>
+  </nav>
+</header>
+
+<section class="hero reveal-scroll">
+
+  <div class="hero-container">
+
+    <div>
+
+      <div class="hero-badge">
+        🧶 Dirajut Dengan Cinta • 100% Handmade Premium
+      </div>
+
+      <h1>
+        Handmade
+        <span class="gradient">Crochet</span>
+        Dengan Nuansa
+        Aesthetic Premium.
+      </h1>
+
+      <p>
+        Produk rajutan handmade premium dengan nuansa aesthetic modern yang dibuat secara detail dan penuh cinta. Cocok untuk hadiah spesial, koleksi lucu, hingga custom handmade favoritmu.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="#products" class="btn btn-primary">Explore Products</a>
+        <a href="#gallery" class="btn btn-secondary">See Gallery ✨</a>
+      </div>
+
+      <div style="display:flex;gap:12px;flex-wrap:wrap;margin-bottom:35px;">
+        <div style="padding:10px 16px;background:white;border-radius:999px;font-size:14px;font-weight:600;color:#4f46e5;box-shadow:0 10px 25px rgba(37,99,235,0.08);">✨ Aesthetic Design</div>
+        <div style="padding:10px 16px;background:white;border-radius:999px;font-size:14px;font-weight:600;color:#4f46e5;box-shadow:0 10px 25px rgba(37,99,235,0.08);">💜 Custom Request</div>
+        <div style="padding:10px 16px;background:white;border-radius:999px;font-size:14px;font-weight:600;color:#4f46e5;box-shadow:0 10px 25px rgba(37,99,235,0.08);">🎁 Perfect Gift</div>
+      </div>
+
+      <div class="stats">
+
+        <div class="stat">
+          <h3>100%</h3>
+          <span>Handmade</span>
+        </div>
+
+        <div class="stat">
+          <h3>500+</h3>
+          <span>Customer</span>
+        </div>
+
+        <div class="stat">
+          <h3>4.9★</h3>
+          <span>Rating</span>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="hero-image">
+
+      <img src="https://images.unsplash.com/photo-1576871337632-b9aef4c17ab9?q=80&w=1200&auto=format&fit=crop" alt="Flani Rajut">
+
+      <div class="floating-card card-one">
+        <h4>✨ Custom Handmade</h4>
+        <p>
+          Bisa request desain dan warna sesuai keinginanmu.
+        </p>
+      </div>
+
+      <div class="floating-card card-two">
+        <h4>💜 Premium Quality</h4>
+        <p>
+          Menggunakan bahan pilihan dengan hasil rajutan terbaik.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section class="reveal-scroll">
+
+  <div class="container">
+
+    <div style="position:relative;margin-bottom:120px;">
+
+      <div style="text-align:center;margin-bottom:55px;position:relative;z-index:2;">
+        <span style="display:inline-block;padding:12px 22px;background:#eef2ff;color:#4f46e5;border-radius:999px;font-size:14px;font-weight:600;margin-bottom:20px;box-shadow:0 10px 30px rgba(79,70,229,0.08);">
+          ✨ Kenapa Flani_rajut?
+        </span>
+
+        <h2 style="font-size:56px;color:#0f172a;font-weight:800;letter-spacing:-2px;line-height:1.1;margin-bottom:18px;">
+          Handmade Yang Lucu,
+          <span style="background:linear-gradient(to right,#2563eb,#9333ea,#ec4899);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">Aesthetic</span>
+          & Berkesan.
+        </h2>
+
+        <p style="max-width:760px;margin:auto;color:#64748b;line-height:1.9;font-size:16px;">
+          Setiap produk Flani_rajut dibuat dengan detail handmade premium, nuansa aesthetic modern, dan sentuhan hangat yang cocok untuk hadiah ataupun koleksi favoritmu.
+        </p>
+      </div>
+
+      <div style="position:absolute;width:250px;height:250px;background:rgba(168,85,247,0.12);filter:blur(90px);top:-40px;left:-40px;border-radius:50%;"></div>
+
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:30px;position:relative;z-index:2;">
+
+        <div class="soft-hover" style="background:linear-gradient(180deg,#ffffff,#f8f5ff);padding:40px 35px;border-radius:32px;box-shadow:0 20px 60px rgba(124,58,237,0.08);border:1px solid rgba(168,85,247,0.08);position:relative;overflow:hidden;transition:0.4s;">
+
+          <div style="position:absolute;top:-20px;right:-20px;width:90px;height:90px;background:rgba(168,85,247,0.08);border-radius:50%;"></div>
+
+          <div style="width:75px;height:75px;border-radius:24px;background:linear-gradient(to right,#ede9fe,#dbeafe);display:flex;align-items:center;justify-content:center;font-size:34px;margin-bottom:28px;box-shadow:0 10px 30px rgba(124,58,237,0.08);">
+            🧶
+          </div>
+
+          <h3 style="font-size:28px;margin-bottom:16px;color:#111827;font-weight:700;line-height:1.2;">
+            Handmade Dengan Detail Lucu
+          </h3>
+
+          <p style="color:#64748b;line-height:1.9;font-size:15px;">
+            Setiap produk dibuat secara manual dengan detail aesthetic dan sentuhan cinta di setiap rajutan.
+          </p>
+
+        </div>
+
+        <div class="soft-hover" style="background:linear-gradient(180deg,#ffffff,#fdf2f8);padding:40px 35px;border-radius:32px;box-shadow:0 20px 60px rgba(236,72,153,0.08);border:1px solid rgba(236,72,153,0.08);position:relative;overflow:hidden;transition:0.4s;transform:translateY(20px);">
+
+          <div style="position:absolute;top:-30px;right:-10px;width:100px;height:100px;background:rgba(236,72,153,0.08);border-radius:50%;"></div>
+
+          <div style="width:75px;height:75px;border-radius:24px;background:linear-gradient(to right,#fce7f3,#ede9fe);display:flex;align-items:center;justify-content:center;font-size:34px;margin-bottom:28px;box-shadow:0 10px 30px rgba(236,72,153,0.08);">
+            🎀
+          </div>
+
+          <h3 style="font-size:28px;margin-bottom:16px;color:#111827;font-weight:700;line-height:1.2;">
+            Aesthetic & Soft Vibes
+          </h3>
+
+          <p style="color:#64748b;line-height:1.9;font-size:15px;">
+            Nuansa warna dan desain dibuat aesthetic supaya cocok untuk hadiah ataupun koleksi lucu.
+          </p>
+
+        </div>
+
+        <div class="soft-hover" style="background:linear-gradient(180deg,#ffffff,#eff6ff);padding:40px 35px;border-radius:32px;box-shadow:0 20px 60px rgba(37,99,235,0.08);border:1px solid rgba(37,99,235,0.08);position:relative;overflow:hidden;transition:0.4s;">
+
+          <div style="position:absolute;top:-20px;right:-20px;width:90px;height:90px;background:rgba(37,99,235,0.08);border-radius:50%;"></div>
+
+          <div style="width:75px;height:75px;border-radius:24px;background:linear-gradient(to right,#dbeafe,#ede9fe);display:flex;align-items:center;justify-content:center;font-size:34px;margin-bottom:28px;box-shadow:0 10px 30px rgba(37,99,235,0.08);">
+            🌷
+          </div>
+
+          <h3 style="font-size:28px;margin-bottom:16px;color:#111827;font-weight:700;line-height:1.2;">
+            Limited Handmade ✨
+          </h3>
+
+          <p style="color:#64748b;line-height:1.9;font-size:15px;">
+            Karena dibuat manual satu per satu, setiap rajutan terasa lebih spesial, unik, dan tidak pasaran.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center;margin-bottom:140px;">
+
+      <div style="position:relative;">
+
+        <div style="position:absolute;width:220px;height:220px;background:rgba(236,72,153,0.12);filter:blur(80px);top:-40px;left:-30px;border-radius:50%;"></div>
+
+        <img src="https://media.istockphoto.com/id/2172640648/id/foto/merajut-dengan-wol.jpg?s=612x612&w=0&k=20&c=SUfYQU6OZghaiVeIc3t3HcaoZMpcjyo2RBH73IiW_NY=" style="width:100%;height:620px;object-fit:cover;border-radius:40px;position:relative;z-index:2;box-shadow:0 30px 80px rgba(37,99,235,0.12);">
+
+        <div style="position:absolute;bottom:30px;left:-20px;background:white;padding:22px 24px;border-radius:24px;box-shadow:0 20px 50px rgba(37,99,235,0.1);z-index:3;max-width:260px;">
+          <div style="font-size:28px;margin-bottom:10px;">🧵</div>
+          <h4 style="font-size:20px;color:#111827;margin-bottom:8px;">100% Handmade</h4>
+          <p style="font-size:14px;color:#64748b;line-height:1.7;">
+            Semua produk dirajut manual dengan detail dan cinta.
+          </p>
+        </div>
+
+      </div>
+
+      <div>
+
+        <div style="display:inline-flex;padding:12px 20px;border-radius:999px;background:#eef2ff;color:#4f46e5;font-weight:600;margin-bottom:24px;box-shadow:0 10px 30px rgba(79,70,229,0.08);">
+          ✨ About Flani_rajut
+        </div>
+
+        <h2 style="font-size:64px;line-height:1.05;color:#0f172a;font-weight:800;letter-spacing:-3px;margin-bottom:28px;">
+          Dirajut Dengan
+          <span style="background:linear-gradient(to right,#2563eb,#9333ea,#ec4899);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">Cinta</span>
+          Dan Nuansa
+          Aesthetic.
+        </h2>
+
+        <p style="font-size:18px;color:#64748b;line-height:2;margin-bottom:35px;max-width:620px;">
+          Flani_rajut adalah brand handmade dari Bekasi yang menghadirkan produk rajutan aesthetic premium dengan desain lucu, modern, dan detail yang dibuat secara manual.
+        </p>
+
+        <div style="display:flex;flex-direction:column;gap:18px;margin-bottom:38px;max-width:520px;">
+
+          <div style="display:flex;align-items:flex-start;gap:18px;background:rgba(255,255,255,0.9);padding:22px 24px;border-radius:24px;border:1px solid rgba(37,99,235,0.06);box-shadow:0 15px 40px rgba(37,99,235,0.05);transition:0.3s;">
+
+            <div style="min-width:58px;height:58px;border-radius:18px;background:linear-gradient(to right,#ede9fe,#dbeafe);display:flex;align-items:center;justify-content:center;font-size:26px;">
+              💜
+            </div>
+
+            <div>
+              <h4 style="font-size:20px;color:#111827;margin-bottom:8px;font-weight:700;">
+                Custom Request
+              </h4>
+
+              <p style="color:#64748b;line-height:1.8;font-size:14px;">
+                Bisa request warna, karakter, dan model rajutan favoritmu.
+              </p>
+            </div>
+
+          </div>
+
+          <div style="display:flex;align-items:flex-start;gap:18px;background:linear-gradient(to right,#fdf2f8,#ffffff);padding:22px 24px;border-radius:24px;border:1px solid rgba(236,72,153,0.08);box-shadow:0 15px 40px rgba(236,72,153,0.05);transition:0.3s;transform:translateX(18px);">
+
+            <div style="min-width:58px;height:58px;border-radius:18px;background:linear-gradient(to right,#fce7f3,#ede9fe);display:flex;align-items:center;justify-content:center;font-size:26px;">
+              🎁
+            </div>
+
+            <div>
+              <h4 style="font-size:20px;color:#111827;margin-bottom:8px;font-weight:700;">
+                Perfect Gift Ideas
+              </h4>
+
+              <p style="color:#64748b;line-height:1.8;font-size:14px;">
+                Packaging aesthetic dan cocok dijadikan hadiah spesial untuk orang tersayang.
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+
+        <div style="display:flex;align-items:center;gap:18px;flex-wrap:wrap;">
+
+          <a href="#" class="btn btn-primary">
+            Chat WhatsApp 💬
+          </a>
+
+          <div style="display:flex;align-items:center;gap:10px;color:#64748b;font-size:15px;font-weight:500;">
+            <span style="width:10px;height:10px;border-radius:50%;background:#22c55e;display:block;"></span>
+            Handmade setiap hari dari Bekasi
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="section-title" id="products">
+      <span>OUR PRODUCTS</span>
+      <h2>Handmade Collection</h2>
+      <p>
+        Koleksi produk rajutan aesthetic dengan desain modern dan premium.
+      </p>
+    </div>
+
+    <div class="products">
+
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1740603776823-1440e16d9dee?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+
+        <div class="product-content">
+          <h3>Boneka Rajut</h3>
+          <p>Boneka handmade aesthetic dengan detail premium.</p>
+          <div class="price">Rp 85.000</div>
+          <a href="#" class="product-btn">Chat WhatsApp</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1594638963668-52eb9798e8ca?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+
+        <div class="product-content">
+          <h3>Tas Rajut</h3>
+          <p>Tas rajut modern dengan style clean premium.</p>
+          <div class="price">Rp 120.000</div>
+          <a href="#" class="product-btn">Chat WhatsApp</a>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <img src="https://images.unsplash.com/photo-1708696767929-fc5bd50c164c?q=80&w=764&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
+
+        <div class="product-content">
+          <h3>Bucket Hat</h3>
+          <p>Bucket hat rajut aesthetic untuk outfit harian.</p>
+          <div class="price">Rp 75.000</div>
+          <a href="#" class="product-btn">Chat WhatsApp</a>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section class="reveal-scroll">
+
+  <div class="container">
+
+    <div class="section-title">
+      <span>HOW TO ORDER</span>
+      <h2>Cara Order Yang Mudah ✨</h2>
+      <p>
+        Pesan produk handmade favoritmu dengan proses yang simpel, cepat, dan menyenangkan.
+      </p>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:28px;position:relative;">
+
+      <div style="background:linear-gradient(180deg,#ffffff,#f8f5ff);padding:38px 32px;border-radius:34px;position:relative;border:1px solid rgba(124,58,237,0.08);box-shadow:0 20px 50px rgba(124,58,237,0.08);overflow:hidden;">
+
+        <div style="position:absolute;top:22px;right:22px;font-size:68px;font-weight:800;color:rgba(124,58,237,0.08);">
+          01
+        </div>
+
+        <div style="width:78px;height:78px;border-radius:26px;background:linear-gradient(to right,#ede9fe,#dbeafe);display:flex;align-items:center;justify-content:center;font-size:36px;margin-bottom:26px;box-shadow:0 12px 35px rgba(124,58,237,0.08);">
+          💬
+        </div>
+
+        <h3 style="font-size:28px;color:#111827;line-height:1.2;margin-bottom:16px;font-weight:800;">
+          Chat WhatsApp
+        </h3>
+
+        <p style="color:#64748b;line-height:1.9;font-size:15px;">
+          Hubungi Flani_rajut untuk konsultasi dan pilih produk rajutan favoritmu.
+        </p>
+
+      </div>
+
+      <div style="background:linear-gradient(180deg,#ffffff,#fdf2f8);padding:38px 32px;border-radius:34px;position:relative;border:1px solid rgba(236,72,153,0.08);box-shadow:0 20px 50px rgba(236,72,153,0.08);overflow:hidden;transform:translateY(18px);">
+
+        <div style="position:absolute;top:22px;right:22px;font-size:68px;font-weight:800;color:rgba(236,72,153,0.08);">
+          02
+        </div>
+
+        <div style="width:78px;height:78px;border-radius:26px;background:linear-gradient(to right,#fce7f3,#ede9fe);display:flex;align-items:center;justify-content:center;font-size:36px;margin-bottom:26px;box-shadow:0 12px 35px rgba(236,72,153,0.08);">
+          🎀
+        </div>
+
+        <h3 style="font-size:28px;color:#111827;line-height:1.2;margin-bottom:16px;font-weight:800;">
+          Pilih Desain
+        </h3>
+
+        <p style="color:#64748b;line-height:1.9;font-size:15px;">
+          Tentukan warna, model, ataupun custom request sesuai style favoritmu.
+        </p>
+
+      </div>
+
+      <div style="background:linear-gradient(180deg,#ffffff,#eff6ff);padding:38px 32px;border-radius:34px;position:relative;border:1px solid rgba(37,99,235,0.08);box-shadow:0 20px 50px rgba(37,99,235,0.08);overflow:hidden;">
+
+        <div style="position:absolute;top:22px;right:22px;font-size:68px;font-weight:800;color:rgba(37,99,235,0.08);">
+          03
+        </div>
+
+        <div style="width:78px;height:78px;border-radius:26px;background:linear-gradient(to right,#dbeafe,#ede9fe);display:flex;align-items:center;justify-content:center;font-size:36px;margin-bottom:26px;box-shadow:0 12px 35px rgba(37,99,235,0.08);">
+          🧶
+        </div>
+
+        <h3 style="font-size:28px;color:#111827;line-height:1.2;margin-bottom:16px;font-weight:800;">
+          Dirajut Handmade
+        </h3>
+
+        <p style="color:#64748b;line-height:1.9;font-size:15px;">
+          Produk akan dibuat manual satu per satu dengan detail yang rapih dan aesthetic.
+        </p>
+
+      </div>
+
+      <div style="background:linear-gradient(180deg,#ffffff,#fff7ed);padding:38px 32px;border-radius:34px;position:relative;border:1px solid rgba(249,115,22,0.08);box-shadow:0 20px 50px rgba(249,115,22,0.08);overflow:hidden;transform:translateY(18px);">
+
+        <div style="position:absolute;top:22px;right:22px;font-size:68px;font-weight:800;color:rgba(249,115,22,0.08);">
+          04
+        </div>
+
+        <div style="width:78px;height:78px;border-radius:26px;background:linear-gradient(to right,#ffedd5,#fde68a);display:flex;align-items:center;justify-content:center;font-size:36px;margin-bottom:26px;box-shadow:0 12px 35px rgba(249,115,22,0.08);">
+          📦
+        </div>
+
+        <h3 style="font-size:28px;color:#111827;line-height:1.2;margin-bottom:16px;font-weight:800;">
+          Sampai Ke Rumahmu
+        </h3>
+
+        <p style="color:#64748b;line-height:1.9;font-size:15px;">
+          Produk dikemas dengan aman dan siap dikirim ke seluruh Indonesia.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section class="reveal" id="gallery">
+
+  <div class="container">
+
+    <div style="text-align:center;margin-bottom:75px;position:relative;">
+
+      <div style="position:absolute;width:260px;height:260px;background:rgba(168,85,247,0.10);filter:blur(100px);left:50%;transform:translateX(-50%);top:-70px;border-radius:50%;"></div>
+
+      <span style="display:inline-flex;align-items:center;gap:10px;padding:12px 22px;border-radius:999px;background:white;color:#7c3aed;font-weight:600;box-shadow:0 10px 30px rgba(124,58,237,0.08);margin-bottom:22px;position:relative;z-index:2;">
+        📸 Gallery Flani_rajut
+      </span>
+
+      <h2 style="font-size:58px;line-height:1.1;color:#0f172a;font-weight:800;letter-spacing:-2px;margin-bottom:18px;position:relative;z-index:2;">
+        Cute Handmade
+        <span style="background:linear-gradient(to right,#2563eb,#9333ea,#ec4899);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">Moments</span>
+        & Aesthetic Vibes.
+      </h2>
+
+      <p style="max-width:760px;margin:auto;color:#64748b;line-height:1.9;font-size:16px;position:relative;z-index:2;">
+        Koleksi hasil rajutan handmade dengan nuansa soft aesthetic yang dibuat untuk mempercantik harimu.
+      </p>
+
+    </div>
+
+    <div style="display:grid;grid-template-columns:1.1fr 0.9fr;gap:28px;margin-bottom:28px;align-items:stretch;">
+
+      <div class="gallery-hover" style="position:relative;overflow:hidden;border-radius:40px;height:620px;box-shadow:0 30px 80px rgba(37,99,235,0.12);">
+
+        <img src="https://images.unsplash.com/photo-1576871337632-b9aef4c17ab9?q=80&w=1200&auto=format&fit=crop" style="width:100%;height:100%;object-fit:cover;transition:0.5s;">
+
+        <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(15,23,42,0.55),transparent 55%);"></div>
+
+        <div style="position:absolute;bottom:32px;left:32px;color:white;max-width:420px;">
+          <div style="display:inline-flex;padding:10px 16px;border-radius:999px;background:rgba(255,255,255,0.18);backdrop-filter:blur(10px);font-size:13px;font-weight:600;margin-bottom:18px;">
+            ✨ Best Handmade Collection
+          </div>
+
+          <h3 style="font-size:42px;line-height:1.1;margin-bottom:14px;font-weight:800;">
+            Crochet
+            Aesthetic
+            Premium.
+          </h3>
+
+          <p style="line-height:1.8;color:rgba(255,255,255,0.82);font-size:15px;">
+            Produk handmade lucu dengan detail rajutan aesthetic dan nuansa soft modern.
+          </p>
+        <div style="display:flex;align-items:center;gap:8px;color:#94a3b8;font-size:13px;font-weight:600;">
+            ✨ Real Review
+          </div>
+
+        </div>
+
+      </div>
+
+      <div style="display:grid;grid-template-rows:1fr 1fr;gap:22px;">
+
+        <div class="gallery-hover" style="position:relative;overflow:hidden;border-radius:34px;height:296px;box-shadow:0 25px 60px rgba(236,72,153,0.10);transform:translateY(18px);">
+
+          <img src="https://m.media-amazon.com/images/I/51qxrSqpayL._AC_.jpg" style="width:100%;height:100%;object-fit:cover;">
+
+          <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(15,23,42,0.45),transparent 60%);"></div>
+
+          <div style="position:absolute;bottom:22px;left:22px;color:white;">
+            <div style="font-size:26px;margin-bottom:8px;">🎀</div>
+            <h4 style="font-size:26px;font-weight:700;line-height:1.2;">
+              Soft Girl
+              Crochet.
+            </h4>
+          </div>
+
+        </div>
+
+        <div class="gallery-hover" style="position:relative;overflow:hidden;border-radius:34px;height:296px;box-shadow:0 25px 60px rgba(124,58,237,0.10);">
+
+          <img src="https://cnc-magazine.oramiland.com/parenting/images/merajut_0LPasjG.width-800.jpegquality-80.jpg" style="width:100%;height:100%;object-fit:cover;">
+
+          <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(15,23,42,0.45),transparent 60%);"></div>
+
+          <div style="position:absolute;bottom:22px;left:22px;color:white;">
+            <div style="font-size:26px;margin-bottom:8px;">🧶</div>
+            <h4 style="font-size:26px;font-weight:700;line-height:1.2;">
+              Handmade
+              Daily Style.
+            </h4>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div style="display:flex;justify-content:center;gap:16px;flex-wrap:wrap;margin-top:45px;">
+
+      <div style="padding:12px 20px;border-radius:999px;background:white;color:#7c3aed;font-weight:600;box-shadow:0 10px 30px rgba(124,58,237,0.08);font-size:14px;">
+        ✨ Handmade Aesthetic
+      </div>
+
+      <div style="padding:12px 20px;border-radius:999px;background:white;color:#ec4899;font-weight:600;box-shadow:0 10px 30px rgba(236,72,153,0.08);font-size:14px;">
+        🎀 Cute Crochet Vibes
+      </div>
+
+      <div style="padding:12px 20px;border-radius:999px;background:white;color:#2563eb;font-weight:600;box-shadow:0 10px 30px rgba(37,99,235,0.08);font-size:14px;">
+        💜 Soft Premium Design
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section class="reveal-scroll">
+
+  <div class="container">
+
+    <div style="text-align:center;margin-bottom:80px;position:relative;">
+
+      <div style="position:absolute;width:260px;height:260px;background:rgba(236,72,153,0.10);filter:blur(100px);left:50%;transform:translateX(-50%);top:-70px;border-radius:50%;"></div>
+
+      <span style="display:inline-flex;align-items:center;gap:10px;padding:12px 22px;border-radius:999px;background:white;color:#ec4899;font-weight:600;box-shadow:0 10px 30px rgba(236,72,153,0.08);margin-bottom:22px;position:relative;z-index:2;">
+        💌 Customer Stories
+      </span>
+
+      <h2 style="font-size:58px;line-height:1.1;color:#0f172a;font-weight:800;letter-spacing:-2px;margin-bottom:18px;position:relative;z-index:2;">
+        Mereka Juga
+        <span style="background:linear-gradient(to right,#2563eb,#9333ea,#ec4899);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">Jatuh Cinta</span>
+        Sama Flani_rajut.
+      </h2>
+
+      <p style="max-width:760px;margin:auto;color:#64748b;line-height:1.9;font-size:16px;position:relative;z-index:2;">
+        Review manis dari customer yang sudah punya produk handmade aesthetic favorit mereka.
+      </p>
+
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:26px;align-items:stretch;">
+
+      <div style="background:linear-gradient(180deg,#ffffff,#fdf2f8);padding:34px;border-radius:36px;position:relative;overflow:hidden;border:1px solid rgba(236,72,153,0.08);box-shadow:0 25px 60px rgba(236,72,153,0.08);transition:0.4s;transform:translateY(12px);">
+
+        <div style="position:absolute;top:-30px;right:-10px;font-size:120px;color:rgba(236,72,153,0.05);font-weight:800;line-height:1;">“</div>
+
+        <div style="display:flex;align-items:center;gap:16px;margin-bottom:24px;position:relative;z-index:2;">
+
+          <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=400&auto=format&fit=crop" style="width:68px;height:68px;border-radius:50%;object-fit:cover;border:4px solid white;box-shadow:0 10px 25px rgba(236,72,153,0.12);">
+
+          <div>
+            <h4 style="font-size:21px;color:#111827;font-weight:700;margin-bottom:4px;">Sarah Aulia</h4>
+            <div style="color:#ec4899;font-size:14px;font-weight:600;">★★★★★ Verified Buyer</div>
+          </div>
+
+        </div>
+
+        <p style="font-size:16px;line-height:1.95;color:#475569;margin-bottom:24px;position:relative;z-index:2;">
+          “Produknya lucu banget 😭💜 detail rajutannya rapih dan packaging-nya aesthetic banget kayak hadiah premium.”
+        </p>
+
+        <div style="display:flex;gap:12px;flex-wrap:wrap;position:relative;z-index:2;">
+          <div style="padding:10px 16px;border-radius:999px;background:white;color:#ec4899;font-size:13px;font-weight:600;box-shadow:0 10px 25px rgba(236,72,153,0.08);">
+            🎀 Cute Packaging
+          </div>
+        </div>
+
+      </div>
+
+      <div style="background:linear-gradient(180deg,#ffffff,#eff6ff);padding:34px;border-radius:36px;position:relative;overflow:hidden;border:1px solid rgba(37,99,235,0.08);box-shadow:0 25px 60px rgba(37,99,235,0.08);transition:0.4s;">
+
+        <div style="position:absolute;top:-30px;right:-10px;font-size:120px;color:rgba(37,99,235,0.05);font-weight:800;line-height:1;">“</div>
+
+        <div style="display:flex;align-items:center;gap:16px;margin-bottom:24px;position:relative;z-index:2;">
+
+          <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=400&auto=format&fit=crop" style="width:68px;height:68px;border-radius:50%;object-fit:cover;border:4px solid white;box-shadow:0 10px 25px rgba(37,99,235,0.12);">
+
+          <div>
+            <h4 style="font-size:21px;color:#111827;font-weight:700;margin-bottom:4px;">Nabila</h4>
+            <div style="color:#2563eb;font-size:14px;font-weight:600;">★★★★★ Happy Buyer</div>
+          </div>
+
+        </div>
+
+        <p style="font-size:16px;line-height:1.95;color:#475569;margin-bottom:24px;position:relative;z-index:2;">
+          “Warna rajutannya soft banget dan hasilnya lebih bagus dari ekspektasi 😭✨”
+        </p>
+
+        <div style="display:flex;gap:12px;flex-wrap:wrap;position:relative;z-index:2;">
+          <div style="padding:10px 16px;border-radius:999px;background:white;color:#2563eb;font-size:13px;font-weight:600;box-shadow:0 10px 25px rgba(37,99,235,0.08);">
+            💙 Soft Premium
+          </div>
+        </div>
+
+      </div>
+
+      <div style="background:linear-gradient(180deg,#ffffff,#f8f5ff);padding:34px;border-radius:36px;position:relative;overflow:hidden;border:1px solid rgba(124,58,237,0.08);box-shadow:0 25px 60px rgba(124,58,237,0.08);transition:0.4s;transform:translateY(12px);">
+
+        <div style="position:absolute;top:-30px;right:-10px;font-size:120px;color:rgba(124,58,237,0.05);font-weight:800;line-height:1;">“</div>
+
+        <div style="display:flex;align-items:center;gap:16px;margin-bottom:24px;position:relative;z-index:2;">
+
+          <img src="https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?q=80&w=400&auto=format&fit=crop" style="width:68px;height:68px;border-radius:50%;object-fit:cover;border:4px solid white;box-shadow:0 10px 25px rgba(124,58,237,0.12);">
+
+          <div>
+            <h4 style="font-size:21px;color:#111827;font-weight:700;margin-bottom:4px;">Dinda</h4>
+            <div style="color:#7c3aed;font-size:14px;font-weight:600;">★★★★★ Repeat Order</div>
+          </div>
+
+        </div>
+
+        <p style="font-size:16px;line-height:1.95;color:#475569;margin-bottom:24px;position:relative;z-index:2;">
+          “Custom request-ku dibuat persis banget 😭💜 bakal order lagi sih ini.”
+        </p>
+
+        <div style="display:flex;gap:12px;flex-wrap:wrap;position:relative;z-index:2;">
+          <div style="padding:10px 16px;border-radius:999px;background:white;color:#7c3aed;font-size:13px;font-weight:600;box-shadow:0 10px 25px rgba(124,58,237,0.08);">
+            🌷 Custom Favorite
+          </div>
+        </div>
+
+      </div>
+
+      <div style="background:linear-gradient(180deg,#ffffff,#fff7ed);padding:34px;border-radius:36px;position:relative;overflow:hidden;border:1px solid rgba(249,115,22,0.08);box-shadow:0 25px 60px rgba(249,115,22,0.08);transition:0.4s;">
+
+        <div style="position:absolute;top:-30px;right:-10px;font-size:120px;color:rgba(249,115,22,0.05);font-weight:800;line-height:1;">“</div>
+
+        <div style="display:flex;align-items:center;gap:16px;margin-bottom:24px;position:relative;z-index:2;">
+
+          <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=400&auto=format&fit=crop" style="width:68px;height:68px;border-radius:50%;object-fit:cover;border:4px solid white;box-shadow:0 10px 25px rgba(249,115,22,0.12);">
+
+          <div>
+            <h4 style="font-size:21px;color:#111827;font-weight:700;margin-bottom:4px;">Alya</h4>
+            <div style="color:#f97316;font-size:14px;font-weight:600;">★★★★★ New Customer</div>
+          </div>
+
+        </div>
+
+        <p style="font-size:16px;line-height:1.95;color:#475569;margin-bottom:24px;position:relative;z-index:2;">
+          “Baru pertama order tapi langsung suka banget sama hasil handmade-nya 😭🧶”
+        </p>
+
+        <div style="display:flex;gap:12px;flex-wrap:wrap;position:relative;z-index:2;">
+          <div style="padding:10px 16px;border-radius:999px;background:white;color:#f97316;font-size:13px;font-weight:600;box-shadow:0 10px 25px rgba(249,115,22,0.08);">
+            ✨ Handmade Favorite
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section class="reveal-scroll">
+
+  <div class="container">
+
+    <div style="text-align:center;margin-bottom:80px;position:relative;">
+
+      <div style="position:absolute;width:260px;height:260px;background:rgba(124,58,237,0.10);filter:blur(100px);left:50%;transform:translateX(-50%);top:-70px;border-radius:50%;"></div>
+
+      <span style="display:inline-flex;align-items:center;gap:10px;padding:12px 22px;border-radius:999px;background:white;color:#7c3aed;font-weight:600;box-shadow:0 10px 30px rgba(124,58,237,0.08);margin-bottom:22px;position:relative;z-index:2;">
+        💭 FAQ Flani_rajut
+      </span>
+
+      <h2 style="font-size:58px;line-height:1.1;color:#0f172a;font-weight:800;letter-spacing:-2px;margin-bottom:18px;position:relative;z-index:2;">
+        Hal Yang
+        <span style="background:linear-gradient(to right,#2563eb,#9333ea,#ec4899);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">Sering Ditanyakan</span>
+        Customer.
+      </h2>
+
+      <p style="max-width:760px;margin:auto;color:#64748b;line-height:1.9;font-size:16px;position:relative;z-index:2;">
+        Semua informasi penting tentang produk handmade aesthetic Flani_rajut ada di sini ✨
+      </p>
+
+    </div>
+
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start;">
+
+      <div style="display:flex;flex-direction:column;gap:22px;">
+
+        <div style="background:linear-gradient(180deg,#ffffff,#f8f5ff);padding:32px;border-radius:34px;border:1px solid rgba(124,58,237,0.08);box-shadow:0 20px 50px rgba(124,58,237,0.08);position:relative;overflow:hidden;">
+
+          <div style="position:absolute;top:-20px;right:-20px;width:90px;height:90px;background:rgba(124,58,237,0.08);border-radius:50%;"></div>
+
+          <div style="display:flex;align-items:flex-start;gap:18px;position:relative;z-index:2;">
+
+            <div style="min-width:68px;height:68px;border-radius:22px;background:linear-gradient(to right,#ede9fe,#dbeafe);display:flex;align-items:center;justify-content:center;font-size:32px;box-shadow:0 10px 25px rgba(124,58,237,0.08);">
+              ⏳
+            </div>
+
+            <div>
+              <h3 style="font-size:26px;color:#111827;font-weight:800;line-height:1.2;margin-bottom:14px;">
+                Berapa Lama
+                Pengerjaannya?
+              </h3>
+
+              <p style="color:#64748b;line-height:1.9;font-size:15px;">
+                Estimasi pengerjaan sekitar 2–7 hari tergantung tingkat kesulitan dan custom produk.
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+
+        <div style="background:linear-gradient(180deg,#ffffff,#eff6ff);padding:32px;border-radius:34px;border:1px solid rgba(37,99,235,0.08);box-shadow:0 20px 50px rgba(37,99,235,0.08);position:relative;overflow:hidden;transform:translateX(18px);">
+
+          <div style="position:absolute;top:-20px;right:-20px;width:90px;height:90px;background:rgba(37,99,235,0.08);border-radius:50%;"></div>
+
+          <div style="display:flex;align-items:flex-start;gap:18px;position:relative;z-index:2;">
+
+            <div style="min-width:68px;height:68px;border-radius:22px;background:linear-gradient(to right,#dbeafe,#ede9fe);display:flex;align-items:center;justify-content:center;font-size:32px;box-shadow:0 10px 25px rgba(37,99,235,0.08);">
+              🎨
+            </div>
+
+            <div>
+              <h3 style="font-size:26px;color:#111827;font-weight:800;line-height:1.2;margin-bottom:14px;">
+                Bisa Custom
+                Sesuka Hati?
+              </h3>
+
+              <p style="color:#64748b;line-height:1.9;font-size:15px;">
+                Tentu 💜 Kamu bisa request warna, karakter, ukuran, hingga model favoritmu.
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:22px;padding-top:28px;">
+
+        <div style="background:linear-gradient(180deg,#ffffff,#fdf2f8);padding:32px;border-radius:34px;border:1px solid rgba(236,72,153,0.08);box-shadow:0 20px 50px rgba(236,72,153,0.08);position:relative;overflow:hidden;">
+
+          <div style="position:absolute;top:-20px;right:-20px;width:90px;height:90px;background:rgba(236,72,153,0.08);border-radius:50%;"></div>
+
+          <div style="display:flex;align-items:flex-start;gap:18px;position:relative;z-index:2;">
+
+            <div style="min-width:68px;height:68px;border-radius:22px;background:linear-gradient(to right,#fce7f3,#ede9fe);display:flex;align-items:center;justify-content:center;font-size:32px;box-shadow:0 10px 25px rgba(236,72,153,0.08);">
+              📦
+            </div>
+
+            <div>
+              <h3 style="font-size:26px;color:#111827;font-weight:800;line-height:1.2;margin-bottom:14px;">
+                Pengiriman
+                Dari Mana?
+              </h3>
+
+              <p style="color:#64748b;line-height:1.9;font-size:15px;">
+                Semua produk dikirim langsung dari Bekasi dengan packaging aman dan aesthetic.
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+
+        <div style="background:linear-gradient(180deg,#ffffff,#fff7ed);padding:32px;border-radius:34px;border:1px solid rgba(249,115,22,0.08);box-shadow:0 20px 50px rgba(249,115,22,0.08);position:relative;overflow:hidden;transform:translateX(-18px);">
+
+          <div style="position:absolute;top:-20px;right:-20px;width:90px;height:90px;background:rgba(249,115,22,0.08);border-radius:50%;"></div>
+
+          <div style="display:flex;align-items:flex-start;gap:18px;position:relative;z-index:2;">
+
+            <div style="min-width:68px;height:68px;border-radius:22px;background:linear-gradient(to right,#ffedd5,#fde68a);display:flex;align-items:center;justify-content:center;font-size:32px;box-shadow:0 10px 25px rgba(249,115,22,0.08);">
+              💌
+            </div>
+
+            <div>
+              <h3 style="font-size:26px;color:#111827;font-weight:800;line-height:1.2;margin-bottom:14px;">
+                Ordernya
+                Lewat Mana?
+              </h3>
+
+              <p style="color:#64748b;line-height:1.9;font-size:15px;">
+                Kamu bisa langsung order lewat WhatsApp atau checkout melalui marketplace favoritmu.
+              </p>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section class="reveal-scroll">
+
+  <div class="container">
+
+    <div style="position:relative;overflow:hidden;border-radius:46px;padding:90px 70px;background:linear-gradient(135deg,#dbeafe 0%,#ede9fe 45%,#fdf2f8 100%);border:1px solid rgba(255,255,255,0.45);box-shadow:0 35px 90px rgba(124,58,237,0.12);">
+
+      <div style="position:absolute;width:320px;height:320px;background:rgba(124,58,237,0.16);filter:blur(110px);top:-120px;right:-80px;border-radius:50%;"></div>
+
+      <div style="position:absolute;width:260px;height:260px;background:rgba(236,72,153,0.12);filter:blur(100px);bottom:-120px;left:-60px;border-radius:50%;"></div>
+
+      <div style="display:grid;grid-template-columns:1.1fr 0.9fr;gap:60px;align-items:center;position:relative;z-index:2;">
+
+        <div>
+
+          <div style="display:inline-flex;align-items:center;gap:10px;padding:12px 22px;border-radius:999px;background:rgba(255,255,255,0.7);backdrop-filter:blur(14px);color:#7c3aed;font-weight:600;box-shadow:0 10px 30px rgba(124,58,237,0.08);margin-bottom:26px;">
+            💜 Handmade Special For You
+          </div>
+
+          <h2 style="font-size:68px;line-height:1.02;color:#0f172a;font-weight:800;letter-spacing:-3px;margin-bottom:24px;max-width:760px;">
+            Siap Punya
+            <span style="background:linear-gradient(to right,#2563eb,#9333ea,#ec4899);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">Rajutan Lucu</span>
+            Favoritmu?
+          </h2>
+
+          <p style="font-size:18px;color:#475569;line-height:2;max-width:620px;margin-bottom:38px;">
+            Produk handmade aesthetic dengan nuansa soft premium yang dibuat penuh cinta untuk menemani harimu ✨
+          </p>
+
+          <div style="display:flex;align-items:center;gap:18px;flex-wrap:wrap;">
+
+            <a href="#" class="btn btn-primary" style="padding:20px 36px;border-radius:20px;font-size:16px;">
+              Chat WhatsApp 💬
+            </a>
+
+            <div style="display:flex;align-items:center;gap:10px;padding:14px 20px;border-radius:999px;background:rgba(255,255,255,0.72);backdrop-filter:blur(12px);box-shadow:0 10px 30px rgba(15,23,42,0.05);font-size:14px;font-weight:600;color:#64748b;">
+              ✨ Fast Response & Friendly Admin
+            </div>
+
+          </div>
+
+        </div>
+
+        <div style="position:relative;height:100%;display:flex;justify-content:center;align-items:center;">
+
+          <div style="position:relative;width:100%;max-width:420px;">
+
+            <img src="https://images.unsplash.com/photo-1629019317873-3f603b269723?q=80&w=1019&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" style="width:100%;height:520px;object-fit:cover;border-radius:36px;box-shadow:0 30px 80px rgba(37,99,235,0.14);position:relative;z-index:2;">
+
+            <div style="position:absolute;top:-18px;right:-18px;background:white;padding:18px 22px;border-radius:24px;box-shadow:0 20px 50px rgba(124,58,237,0.12);z-index:3;max-width:220px;">
+              <div style="font-size:26px;margin-bottom:8px;">🎀</div>
+              <h4 style="font-size:18px;color:#111827;font-weight:700;margin-bottom:6px;line-height:1.2;">
+                Cute Crochet
+                Collection
+              </h4>
+              <p style="font-size:13px;color:#64748b;line-height:1.7;">
+                Handmade aesthetic dengan nuansa soft premium.
+              </p>
+            </div>
+
+            <div style="position:absolute;bottom:-18px;left:-18px;background:rgba(255,255,255,0.82);backdrop-filter:blur(14px);padding:18px 22px;border-radius:24px;box-shadow:0 20px 50px rgba(236,72,153,0.12);z-index:3;display:flex;align-items:center;gap:14px;">
+
+              <div style="width:56px;height:56px;border-radius:18px;background:linear-gradient(to right,#ede9fe,#fce7f3);display:flex;align-items:center;justify-content:center;font-size:28px;">
+                💜
+              </div>
+
+              <div>
+                <h4 style="font-size:18px;color:#111827;font-weight:700;margin-bottom:4px;">
+                  500+ Happy Customer
+                </h4>
+                <p style="font-size:13px;color:#64748b;line-height:1.6;">
+                  Sudah jatuh cinta sama Flani_rajut ✨
+                </p>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<footer style="position:relative;padding:100px 30px 45px;background:linear-gradient(180deg,#ffffff,#f8f5ff);overflow:hidden;border-top:1px solid rgba(124,58,237,0.08);">
+
+  <div style="position:absolute;width:320px;height:320px;background:rgba(124,58,237,0.10);filter:blur(120px);top:-120px;left:-120px;border-radius:50%;"></div>
+
+  <div style="position:absolute;width:280px;height:280px;background:rgba(236,72,153,0.10);filter:blur(120px);bottom:-120px;right:-120px;border-radius:50%;"></div>
+
+  <div class="container" style="position:relative;z-index:2;">
+
+    <div style="display:grid;grid-template-columns:1.2fr 0.8fr 0.8fr 1fr;gap:45px;padding-bottom:55px;border-bottom:1px solid rgba(124,58,237,0.08);align-items:start;">
+
+      <div>
+
+        <div style="margin-bottom:18px;display:flex;flex-direction:column;gap:12px;align-items:flex-start;">
+
+          <div style="position:relative;display:inline-block;">
+
+            <div style="font-size:48px;font-weight:800;line-height:1.1;letter-spacing:-1px;padding-bottom:8px;background:linear-gradient(to right,#2563eb,#7c3aed,#ec4899);-webkit-background-clip:text;-webkit-text-fill-color:transparent;display:inline-block;">
+              Flani<span style="opacity:0.55;">_</span>rajut
+            </div>
+
+            <div style="position:absolute;bottom:-6px;left:2px;width:92%;height:10px;background:linear-gradient(to right,rgba(37,99,235,0.12),rgba(236,72,153,0.12));border-radius:999px;filter:blur(10px);"></div>
+
+          </div>
+
+        </div>
+
+        <p style="color:#64748b;line-height:1.95;font-size:15px;max-width:390px;margin-bottom:26px;text-align:left;">
+          Produk handmade aesthetic dengan nuansa soft premium yang dibuat penuh cinta untuk menemani harimu setiap hari 💜
+        </p>
+
+        <div style="margin-bottom:18px;text-align:left;display:flex;flex-direction:column;align-items:flex-start;">
+
+          <h4 style="font-size:15px;color:#111827;font-weight:700;margin-bottom:16px;letter-spacing:0.3px;text-align:left;">
+            Social Media
+          </h4>
+
+          <div style="display:flex;align-items:center;gap:18px;flex-wrap:wrap;">
+
+            <a href="#" style="text-decoration:none;color:#64748b;font-size:15px;font-weight:500;transition:0.3s;">
+              Instagram
+            </a>
+
+            <a href="#" style="text-decoration:none;color:#64748b;font-size:15px;font-weight:500;transition:0.3s;">
+              TikTok
+            </a>
+
+            <a href="#" style="text-decoration:none;color:#64748b;font-size:15px;font-weight:500;transition:0.3s;">
+              WhatsApp
+            </a>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div>
+
+        <h3 style="font-size:24px;color:#111827;font-weight:800;margin-bottom:26px;line-height:1.2;">
+          Explore
+        </h3>
+
+        <div style="display:flex;flex-direction:column;gap:16px;">
+          <a href="#" style="text-decoration:none;color:#64748b;font-size:15px;transition:0.3s;">Home</a>
+          <a href="#" style="text-decoration:none;color:#64748b;font-size:15px;transition:0.3s;">About</a>
+          <a href="#" style="text-decoration:none;color:#64748b;font-size:15px;transition:0.3s;">Products</a>
+          <a href="#" style="text-decoration:none;color:#64748b;font-size:15px;transition:0.3s;">Gallery</a>
+        </div>
+
+      </div>
+
+      <div>
+
+        <h3 style="font-size:24px;color:#111827;font-weight:800;margin-bottom:26px;line-height:1.2;">
+          Support
+        </h3>
+
+        <div style="display:flex;flex-direction:column;gap:16px;">
+          <a href="#" style="text-decoration:none;color:#64748b;font-size:15px;transition:0.3s;">FAQ</a>
+          <a href="#" style="text-decoration:none;color:#64748b;font-size:15px;transition:0.3s;">Testimonials</a>
+          <a href="#" style="text-decoration:none;color:#64748b;font-size:15px;transition:0.3s;">Contact</a>
+          <a href="#" style="text-decoration:none;color:#64748b;font-size:15px;transition:0.3s;">WhatsApp</a>
+        </div>
+
+      </div>
+
+      <div>
+
+        <div style="background:linear-gradient(180deg,#ffffff,#fdf2f8);padding:32px;border-radius:34px;border:1px solid rgba(236,72,153,0.08);box-shadow:0 25px 60px rgba(236,72,153,0.10);position:relative;overflow:hidden;transform:translateY(-10px);">
+
+          <div style="position:absolute;top:-20px;right:-20px;width:90px;height:90px;background:rgba(236,72,153,0.08);border-radius:50%;"></div>
+
+          <div style="font-size:38px;margin-bottom:16px;position:relative;z-index:2;">
+            💌
+          </div>
+
+          <h3 style="font-size:24px;color:#111827;font-weight:800;line-height:1.2;margin-bottom:14px;position:relative;z-index:2;">
+            Let’s Create
+            Something Cute.
+          </h3>
+
+          <p style="font-size:14px;color:#64748b;line-height:1.9;margin-bottom:22px;position:relative;z-index:2;">
+            Chat Flani_rajut sekarang dan temukan handmade favoritmu ✨
+          </p>
+
+          <a href="#" style="display:inline-flex;align-items:center;justify-content:center;padding:16px 24px;border-radius:18px;background:linear-gradient(to right,#2563eb,#9333ea);color:white;text-decoration:none;font-weight:600;box-shadow:0 15px 40px rgba(124,58,237,0.16);position:relative;z-index:2;">
+            Chat WhatsApp 💬
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div style="padding-top:35px;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap;">
+
+      <p style="color:#94a3b8;font-size:14px;line-height:1.8;">
+        © 2026 Flani_rajut — Dirajut Dengan Cinta 💜
+      </p>
+
+      <div style="display:flex;align-items:center;gap:18px;flex-wrap:wrap;">
+
+        <a href="#" style="text-decoration:none;color:#94a3b8;font-size:14px;font-weight:500;transition:0.3s;">
+          Terms of Service
+        </a>
+
+        <a href="#" style="text-decoration:none;color:#94a3b8;font-size:14px;font-weight:500;transition:0.3s;">
+          Policy Service
+        </a>
+
+        <a href="#" style="text-decoration:none;color:#94a3b8;font-size:14px;font-weight:500;transition:0.3s;">
+          Cookie Policy
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</footer>
+
+
+
+
+
+
+<script>
+
+const revealElements = document.querySelectorAll('.reveal-scroll');
+
+function revealOnScroll(){
+  const triggerBottom = window.innerHeight * 0.88;
+
+  revealElements.forEach((el)=>{
+    const rect = el.getBoundingClientRect();
+
+    if(rect.top < triggerBottom){
+      el.classList.add('active');
+    }
+  });
+}
+
+window.addEventListener('scroll', revealOnScroll);
+window.addEventListener('load', revealOnScroll);
+
+</script>
+
+</body>
+</html>
